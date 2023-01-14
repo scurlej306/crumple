@@ -7,6 +7,7 @@ Run 'npm run start' from the main directory.
 
 # Packaging a distributable
 Modify the forge.config.js file with the desired packaging details. See the Electron Forge documentation for more details: https://www.electronforge.io/
+
 Run 'npm run make' from the main directory.
 
 # Using the software
