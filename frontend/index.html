@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="content-security-policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline'"
+    />
+    <title>Crumple - CSV Reader</title>
+  </head>
+  <body>
+    <div id="file-loader">
+      <label for="file-input">Load files:</label>
+      <input id="file-input" type="file" accept="text/csv" name="file-input" onchange="loadFile(event)" multiple>
+    </div>
+    <p></p>
+    <div id="query-builder">
+      <label for="param-table">Find records in loaded files:</label>
+      <table id="param-table">
+        <tr>
+          <th>Attribute</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td><select id="query-attr" name="query-attr"></select></td>
+          <td><input id="query-value" type="text" name="query-value"></td>
+          <td><input id="delete-row" type="button" onclick="deleteRow(event)" value="Delete"></td>
+        </tr>
+      </table>
+      <input id="submit-button" type="button" onclick="submitQuery()" value="Submit">
+      <input id="add-param-button" type="button" onclick="addQueryParam()" value="Add Parameter">
+    </div>
+    <div id="output"><table></table></div>
+  </body>
+  <script src="./page-actions.js"></script>
+</html>
