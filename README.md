@@ -14,3 +14,6 @@ Run 'npm run make' from the main directory.
 Select files to read into the program's memory. It is assumed the first line in the file contains headers that apply to all records in that file. It is assumed each record has an entry, even blank, for each header.
 
 Once files are loaded, build a query based on the headers and the desired value that corresponds to the selected header. The query parameters are combined in an 'AND' format (i.e., returned records will match all parameters). Values must match exactly, except for capital/lowercase and leading or trailing whitespace.
+
+#
+Copyright (C) 2023 Jacob Curley
